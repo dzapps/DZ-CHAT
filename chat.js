@@ -49,7 +49,7 @@ var ChatEngine = function() {
     };
     //HTML5 SSE(Server Sent Event) initilization
     this.initSevr = function() {
-        sevr = new EventSource('/DZ-CHAT/chatprocess.php');
+        sevr = new EventSource('https://dzapps.github.io/DZ-CHAT/chatprocess.php');
         sevr.onmessage = function(e) {
             if (oldata != e.data) {
                 chatZone.innerHTML += e.data;
